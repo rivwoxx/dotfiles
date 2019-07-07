@@ -1,0 +1,21 @@
+#!/bin/sh
+
+if [ "$1" = "dual1" ]; then
+	xrandr --output LVDS-1 --primary --mode 1366x768 --left-of HDMI-1 --output HDMI-1 --mode 1440x900
+fi
+
+if [ "$1" = "dual2" ]; then
+	xrandr --output LVDS-1 --primary --mode 1366x768 --left-of HDMI-1 --output HDMI-1 --mode 1366x768
+fi
+
+if [ "$1" = "monitor" ]; then
+	xrandr --output LVDS-1 --off --output HDMI-1 --auto
+fi
+
+if [ "$1" = "tv" ]; then
+	xrandr --output LVDS-1 --off --output HDMI-1 --auto
+fi
+
+if [ "$1" = "laptop" ]; then
+	xrandr --output LVDS-1 --auto --output HDMI-1 --off
+fi
