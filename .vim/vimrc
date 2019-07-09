@@ -12,12 +12,15 @@ set relativenumber
 set mouse=a
 set bg=light
 set digraph
+
 "Spell check set to F1
 	map <F1> :setlocal spell! spelllang=es<CR>
 	map <F2> :set spelllang spelllang=en_us<CR>
 
 " Enable autocompletion:
 set wildmode=longest,list,full
+
+	let g:livepreview_previewer = 'mupdf'
 
 """LATEX
 	" Word count:
@@ -57,4 +60,4 @@ set wildmode=longest,list,full
 	autocmd FileType tex inoremap ,bt {\blindtext}
 	autocmd FileType tex inoremap ,nu $\varnothing$
 	autocmd FileType tex inoremap ,col \begin{columns}[T]<Enter>\begin{column}{.5\textwidth}<Enter><Enter>\end{column}<Enter>\begin{column}{.5\textwidth}<Enter><++><Enter>\end{column}<Enter>\end{columns}<Esc>5kA
-autocmd FileType tex inoremap ,rn (\ref{})<++><Esc>F}i
+	autocmd FileType tex inoremap ,rn (\ref{})<++><Esc>F}i
