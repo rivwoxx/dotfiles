@@ -189,7 +189,6 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id compton -f
 exec --no-startup-id feh --bg-fill /home/rivwox/Pictures/W1.jpg
-exec_always --no-startup-id setxkbmap -layout us 
 
 #Key Bindings
 bindsym $mod+Return exec i3-sensible-terminal
@@ -208,6 +207,7 @@ bindsym $mod+Shift+m exec --no-startup-id spotify
 bindsym $mod+n exec --no-startup-id blurlock
 bindsym $mod+m bar mode toggle  # hide/unhide i3status bar
 bindsym $mod+z exec --no-startup-id morc_menu
+bindsym $mod+w exec --no-startup-id urxvt -e ranger
 
 #bar
 bar {
