@@ -21,10 +21,18 @@ floating_modifier $mod
 bindsym $mod+Shift+q kill
 
 #Media Keys
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ #increase sound volume
-bindsym XF86AudioLowerVolume exec amixer set Master 5%- #decrease sound volume
-bindsym XF86AudioMute exec amixer set Master 1+ toggle # mute sound
+#bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ #increase sound volume
+#bindsym XF86AudioLowerVolume exec amixer set Master 5%- #decrease sound volume
+#bindsym XF86AudioMute exec amixer set Master 1+ toggle # mute sound
+
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
+
+
+#screen brightness controls
+bindsym $mod+F11 exec light -U 5 # decrease screen brightness
+bindsym $mod+F12 exec light -A 5 # increase screen brightness
 
 # change focus
 bindsym $mod+h focus left
@@ -134,9 +142,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Set shut down, restart and locking features
 bindsym $mod+x mode "$mode_system"
-set $mode_system (e)xit, switch_(u)ser, (s)uspend, (r)eboot, (Shift+s)hutdown
+set $mode_system (e)xit, (s)uspend, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
-   	 bindsym u exec --no-startup-id i3exit switch_user, mode "default"
    	 bindsym s exec --no-startup-id i3exit suspend, mode "default"
 	 bindsym e exec --no-startup-id i3exit logout, mode "default"
    	 bindsym r exec --no-startup-id i3exit reboot, mode "default"
@@ -182,9 +189,8 @@ mode "$mode_display"{
 
 # Autostart applications
 exec --no-startup-id nm-applet
-#exec --no-startup-id xfce4-power-manager
 exec --no-startup-id conky
-exec --no-startup-id xautolock -time 250 -locker blurlock
+exec --no-startup-id xautolock -time 120 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id compton -f
@@ -203,9 +209,8 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+d exec rofi -show run 
 bindsym $mod+Shift+v exec --no-startup-id vlc
 bindsym $mod+p exec --no-startup-id keepassxc
-bindsym $mod+Shift+m exec --no-startup-id spotify
-bindsym $mod+n exec --no-startup-id blurlock
-bindsym $mod+m bar mode toggle  # hide/unhide i3status bar
+bindsym $mod+m exec --no-startup-id spotify
+bindsym $mod+s exec --no-startup-id blurlock
 bindsym $mod+z exec --no-startup-id morc_menu
 bindsym $mod+w exec --no-startup-id urxvt -e ranger
 
@@ -214,7 +219,6 @@ bar {
 	i3bar_command i3bar
 	status_command i3blocks -c ~/.i3/i3blocks.conf
 	position top
-#	font pango:TerminessTTF Nerd Font-Medium 8
 	font pango:mono 8
 	bindsym button4 nop
 	bindsym button5 nop
