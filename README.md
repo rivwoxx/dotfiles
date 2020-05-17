@@ -1,3 +1,3 @@
 # dotfiles
 
-![alt text](https://github.com/miusuarioamigo/dotfiles/blob/master/screenshot.jpg)
+Just an alternative while I move stuff
