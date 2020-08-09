@@ -73,12 +73,12 @@ ZSH_THEME="amuse"
 
 ##Plugins 
 plugins=(git)
-plugins=(zsh-syntax-highlighting)
-plugins=(history-substring-search)
+#plugins=(history-substring-search)
+source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 plugins=(zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
-
 # bind UP and DOWN arrow keys to history substring search
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
