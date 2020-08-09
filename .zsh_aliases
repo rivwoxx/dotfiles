@@ -1,0 +1,26 @@
+## Alias section 
+alias cp="cp"                                                
+alias df='df -h'                                                # Human-readable sizes
+alias free='free -m'                                            # Show sizes in MB
+alias gitu='git add . && git status'
+alias v="vim"
+alias ..="cd .."
+alias ...="cd ../.."
+alias cty="tty-clock -c -S "
+alias ctu="tty-clock -c -S -u"
+alias ll="ls -la"
+alias cl="clear"
+alias ison="systemctl is-active"
+alias up="sudo pacman -Syu"
+alias Ss="pacman -Ss"
+alias upyay="yay -Syu"
+alias pe="cat ~/Documents/pepe"
+alias ba="cat ~/Documents/denosver"
+alias his="history | tail -10"
+alias open="xdg-open"
+alias kernel="mhwd-kernel -li"                                  #Yep I am lazy
+alias gt="cd ~/git"
+alias as="cd ~/Documents/aws"
+alias ~="cd ~"
+alias hosts='sudo vim /etc/hosts'
+alias timer='echo "Timer started. Stop with Ctrl-D." && time cat && date'
