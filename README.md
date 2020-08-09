@@ -1,5 +1,3 @@
 # dotfiles
 
-Just an alternative while I move stuff
-
-test2
+dotfiles testing on archlinux
