@@ -2,7 +2,7 @@
 
 My current dotfiles 
 
-##notes for myself
+### notes for myself
 Need to install oh-my-zsh and the following plugins'
 
 - zsh-syntax-highlighting 
