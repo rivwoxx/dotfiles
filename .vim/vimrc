@@ -16,6 +16,9 @@ set mouse=a
 set bg=dark
 set digraph
 
+"Copy-Paste"
+vnoremap <C-c> "+y
+
 "Spell check set to F1
 	map <F1> :setlocal spell! spelllang=es<CR>
 	map <F2> :set spelllang spelllang=en_us<CR>

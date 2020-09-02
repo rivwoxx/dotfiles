@@ -25,3 +25,5 @@ alias ~="cd ~"
 alias hosts='sudo vim /etc/hosts'
 alias timer='echo "Timer started. Stop with Ctrl-D." && time cat && date'
 alias zshr="vim ~/.zshrc"
+alias pidz="ps ax | grep zoom | grep -v grep"			#Look for zoom PID 
+
