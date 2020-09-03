@@ -1,8 +1,9 @@
 ## Alias section 
-alias cp="cp"                                                
+alias cp="cp -r"                                                
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
-alias gitu='git add . && git status'
+alias gadd="git add --all"
+alias gits="git status"
 alias v="vim"
 alias ..="cd .."
 alias ...="cd ../.."
@@ -18,12 +19,13 @@ alias pe="cat ~/Documents/pepe"
 alias ba="cat ~/Documents/denosver"
 alias his="history | tail -10"
 alias open="xdg-open"
-#alias kernel="mhwd-kernel -li"                                  #Yep I am lazy
+alias kernel="uname -r"                                  #Yep I am lazy
 alias gt="cd ~/git"
 alias as="cd ~/Documents/aws"
 alias ~="cd ~"
 alias hosts='sudo vim /etc/hosts'
 alias timer='echo "Timer started. Stop with Ctrl-D." && time cat && date'
 alias zshr="vim ~/.zshrc"
-alias pidz="ps ax | grep zoom | grep -v grep"			#Look for zoom PID 
-
+alias pidz="ps ax | grep /opt/zoom/zoom | grep SLl | awk '{print \$1}'"	#Look for zoom PID 
+alias top="htop"
+alias neo="neofetch"
