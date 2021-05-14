@@ -12,3 +12,5 @@ Need to install oh-my-zsh and the following plugins'
 - zsh-autosuggestions
 
 pepe pecas pica papas
+con un pico
+con un pico
