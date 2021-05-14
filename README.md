@@ -14,3 +14,11 @@ Need to install oh-my-zsh and the following plugins'
 pepe pecas pica papas
 con un pico
 con un pico
+
+pepe pecas pica papas
+con un pico
+con un pico
+
+pepe pecas pica papas
+con un pico
+con un pico
