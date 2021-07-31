@@ -1,5 +1,5 @@
 ## Alias section 
-alias cp="cp"                                                
+alias cp="cp -r"                                                
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git status'
