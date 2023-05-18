@@ -28,3 +28,4 @@ alias zshr="vim ~/.zshrc"
 alias pidz="ps ax | grep zoom | grep -v grep"			#Look for zoom PID 
 alias neo="neofetch"
 alias t1="sensors | grep 'Package id 0'"
+alias code="flatpak run com.visualstudio.code"
